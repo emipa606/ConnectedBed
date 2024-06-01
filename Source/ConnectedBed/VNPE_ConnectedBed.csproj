@@ -1,6 +1,6 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputPath>..\..\Plugins\1.5</OutputPath>
+    <OutputPath>../../1.5/Assemblies</OutputPath>
     <TargetFramework>net48</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
@@ -14,15 +14,16 @@
       <ExcludeAssets>runtime</ExcludeAssets>
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <Reference Include="BadHygiene">
-      <HintPath>..\..\..\..\..\..\workshop\content\294100\836308268\1.5\Assemblies\BadHygiene.dll</HintPath>
-      <Private>False</Private>
+	  <PackageReference Include="Mlie_Rimworld_VersionFromManifest" Version="*" />
+    <Reference Include="PipeSystem">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2023507013\1.5\Assemblies\PipeSystem.dll</HintPath>
+	    <CopyLocal>False</CopyLocal>
+	    <Private>false</Private>
     </Reference>
-	  <ProjectReference Include="..\ConnectedBed\VNPE_ConnectedBed.csproj">
-		  <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
-		  <CopyLocal>False</CopyLocal>
-		  <Private>false</Private>
-		  <ExcludeAssets>all</ExcludeAssets>
-	  </ProjectReference>
+    <Reference Include="VNPE">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2920385763\1.5\Assemblies\VNPE.dll</HintPath>
+	    <CopyLocal>False</CopyLocal>
+	    <Private>false</Private>
+    </Reference>
   </ItemGroup>
 </Project>

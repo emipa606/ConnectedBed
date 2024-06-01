@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <VNPE.MustOverBed>Must be placed over a bed or an enterable building.</VNPE.MustOverBed>
+  <VNPE.StorageSetting>Stop drawing if storage is {0} full</VNPE.StorageSetting>
+  <VNPE.AutoBlood>Automatically draw blood **</VNPE.AutoBlood>
+  <VNPE.Transfuse>Transfuse blood</VNPE.Transfuse>
+  <VNPE.TransfuseSetting>Transfuse if pawn has {0} of blood or less</VNPE.TransfuseSetting>
+  <VNPE.FillUp>Fill them upto {0}*</VNPE.FillUp>
+  <VNPE.HemogenInfo>(*) one hemogen pack adds 35% so it will not be exact amount</VNPE.HemogenInfo>
+  <VNPE.FarmInfo>(**) prisoner interaction type should be set to "Hemogen farm"</VNPE.FarmInfo>
+  <VNPE.Occupants>BedConnector: {0} pawn(s)</VNPE.Occupants>
+  <VNPE.CurrentModVersion>Installed mod-version: {0}</VNPE.CurrentModVersion>
+</LanguageData>

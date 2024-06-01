@@ -1,7 +1,0 @@
-<Patch>
-  <Operation Class="PatchOperationAttributeAdd">
-    <xpath>Defs/ThingDef[defName="HospitalBed"]</xpath>
-    <value>HospitalBed</value>
-    <attribute>Name</attribute>
-  </Operation>
-</Patch>
