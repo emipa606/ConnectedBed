@@ -6,7 +6,7 @@
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <DebugType>None</DebugType>
     <LangVersion>latest</LangVersion>
-    <FileVersion>1.5.0</FileVersion>
+    <FileVersion>1.5.2</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
@@ -18,11 +18,11 @@
       <HintPath>..\..\..\..\..\..\workshop\content\294100\836308268\1.5\Assemblies\BadHygiene.dll</HintPath>
       <Private>False</Private>
     </Reference>
-	  <ProjectReference Include="..\ConnectedBed\VNPE_ConnectedBed.csproj">
-		  <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
-		  <CopyLocal>False</CopyLocal>
-		  <Private>false</Private>
-		  <ExcludeAssets>all</ExcludeAssets>
-	  </ProjectReference>
+    <ProjectReference Include="..\ConnectedBed\VNPE_ConnectedBed.csproj">
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+      <CopyLocal>False</CopyLocal>
+      <Private>false</Private>
+      <ExcludeAssets>all</ExcludeAssets>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -104,7 +104,8 @@ public class CompBedConnector : ThingComp
         var occupants = CurOccupants.ToList();
         foreach (var pawn in occupants)
         {
-            if (!(pawn.needs.food.CurLevelPercentage <= 0.4))
+            var foodNeed = pawn.needs.TryGetNeed<Need_Food>();
+            if (foodNeed == null || foodNeed.CurLevelPercentage > 0.4)
             {
                 continue;
             }
@@ -128,8 +129,8 @@ public class CompBedConnector : ThingComp
                 }
             }
 
-            var ingestedNum = meal.Ingested(pawn, pawn.needs.food.NutritionWanted);
-            pawn.needs.food.CurLevel += ingestedNum;
+            var ingestedNum = meal.Ingested(pawn, foodNeed.NutritionWanted);
+            foodNeed.CurLevel += ingestedNum;
             pawn.records.AddTo(RecordDefOf.NutritionEaten, ingestedNum);
         }
     }

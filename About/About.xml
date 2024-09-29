@@ -57,7 +57,7 @@ A new hospital bed with 4 cool features:
 [*]Optional connection to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=836308268]DBH[/url] for water and bladder needs
 [/olist]
 
-You can use it with both [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2920385763]Vanilla Races Expanded - Sanguophage[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383]Vanilla Nutrient Paste Expanded[/url] simultaneously or with just one of them.
+You can use it with both [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383]Vanilla Races Expanded - Sanguophage[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2920385763]Vanilla Nutrient Paste Expanded[/url] simultaneously or with just one of them.
 [list]
 [*]fully mimics vanilla Hospital Bed
 [*]requires research of Hospital Beds and Nutrient Paste (both vanilla)
@@ -71,13 +71,6 @@ You can use it with both [url=https://steamcommunity.com/sharedfiles/filedetails
 
 Still no custom textures here (I've got trotter hands), just slightly greenish handles, like most VNPE things.
 
-[h2]You may also like...[/h2]
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2974541112][img]https://steamuserimages-a.akamaihd.net/ugc/2031730758744755960/6EBD5542F16F51143F66B0123588C3CD002945A4/?imw=268&amp;amp;imh=151&amp;amp;ima=fit&amp;amp;impolicy=Letterbox[/img][/url] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2961708299][img]https://steamuserimages-a.akamaihd.net/ugc/2030602392616950419/CAF6F6AB4C5D99E729AD70C683C0D78169B028BF/?imw=268&amp;amp;imh=151&amp;amp;ima=fit&amp;amp;impolicy=Letterbox[/img][/url] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2971543841][img]https://steamuserimages-a.akamaihd.net/ugc/2031731300519719867/4E551B5E8A5F51182BD2D8830C7E9E180D0634BC/?imw=268&amp;amp;imh=151&amp;amp;ima=fit&amp;amp;impolicy=Letterbox[/img][/url]
-https://github.com/zed-0xff/RW-ConnectedBed
-
-[h2]Support me[/h2]
-[url=https://ko-fi.com/K3K81Z3W5][img]https://i.imgur.com/Utx6OIH.png[/img][/url] or [url=https://www.patreon.com/zed_0xff]Patreon[/url]
-
 [img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
@@ -87,6 +80,8 @@ https://github.com/zed-0xff/RW-ConnectedBed
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
-[/list]</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.5.1</modVersion>
+[/list]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3259209078][img]https://img.shields.io/github/v/release/emipa606/ConnectedBed?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url]</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.5.2</modVersion>
 </ModMetaData>
