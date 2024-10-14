@@ -1,5 +1,8 @@
 # Changelog for ConnectedBed
 
+1.5.3 - Fixed a silly issue with the DBH assembly not loading
+
+
 1.5.2 - Should work better with pawns that do not have a food need
 
 

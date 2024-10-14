@@ -35,8 +35,9 @@ public class ModConfig : Mod
     {
         try
         {
-            var fname = Path.Combine(content.RootDir, "Plugins",
-                FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion.Replace(".0", ""),
+            var version = Version.Parse(FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location)
+                .FileVersion);
+            var fname = Path.Combine(content.RootDir, "Plugins", $"{version.Major}.{version.Minor}",
                 $"CB_{name}.dll");
             var rawAssembly = File.ReadAllBytes(fname);
             var assembly = AppDomain.CurrentDomain.Load(rawAssembly);
