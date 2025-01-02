@@ -1,5 +1,8 @@
 # Changelog for ConnectedBed
 
+1.5.4 - Removed the convoluted DBH compatibility loading
+
+
 1.5.3 - Fixed a silly issue with the DBH assembly not loading
 
 

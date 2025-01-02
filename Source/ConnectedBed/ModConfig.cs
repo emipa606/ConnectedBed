@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Reflection;
 using Mlie;
 using UnityEngine;
 using Verse;
@@ -11,7 +6,7 @@ namespace zed_0xff.VNPE;
 
 public class ModConfig : Mod
 {
-    public static List<Assembly> plugins = [];
+    public static bool DBH_Loaded;
 
     private static Vector2 scrollPosition = Vector2.zero;
     private static string currentVersion;
@@ -20,10 +15,10 @@ public class ModConfig : Mod
     {
         Settings = GetSettings<ConnectedBedSettings>();
 
-        plugins.Clear();
         if (ModLister.HasActiveModWithName("Dubs Bad Hygiene"))
         {
-            LoadPlugin(content, "DBH");
+            DBH_Loaded = true;
+            Log.Message("[ConnectedBed]: Adding support for Dubs Bad Hygiene");
         }
 
         currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
@@ -31,25 +26,6 @@ public class ModConfig : Mod
 
     public static ConnectedBedSettings Settings { get; private set; }
 
-    private void LoadPlugin(ModContentPack content, string name)
-    {
-        try
-        {
-            var version = Version.Parse(FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location)
-                .FileVersion);
-            var fname = Path.Combine(content.RootDir, "Plugins", $"{version.Major}.{version.Minor}",
-                $"CB_{name}.dll");
-            var rawAssembly = File.ReadAllBytes(fname);
-            var assembly = AppDomain.CurrentDomain.Load(rawAssembly);
-            Log.Message($"[d] ConnectedBed loaded plugin {assembly}");
-            content.assemblies.loadedAssemblies.Add(assembly);
-            plugins.Add(assembly);
-        }
-        catch (Exception ex)
-        {
-            Log.Error($"[!] ConnectedBed: plugin {name} failed to load: {ex}");
-        }
-    }
 
     private void drawBlock(Listing_Standard l, string title, ref ConnectedBedSettings.GeneralSettings s)
     {

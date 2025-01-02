@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using PipeSystem;
@@ -14,7 +13,6 @@ namespace zed_0xff.VNPE;
 
 public class CompBedConnector : ThingComp
 {
-    private IPlugin dbh;
     private CompResource hemogenComp;
     private CompResource pasteComp;
     private CompPowerTrader powerComp;
@@ -37,13 +35,14 @@ public class CompBedConnector : ThingComp
                 // I'm a separate building, built over a bed or smth
                 foreach (var t in parent.Map.thingGrid.ThingsListAt(parent.Position))
                 {
-                    if (t is Pawn { Dead: false } p && p.GetPosture().Laying())
+                    switch (t)
                     {
-                        yield return p;
-                    }
-                    else if (t is Building_Enterable { SelectedPawn: { } p2 } be && p2.ParentHolder == be)
-                    {
-                        yield return p2;
+                        case Pawn { Dead: false } p when p.GetPosture().Laying():
+                            yield return p;
+                            break;
+                        case Building_Enterable { SelectedPawn: { } p2 } be when p2.ParentHolder == be:
+                            yield return p2;
+                            break;
                     }
                 }
             }
@@ -72,22 +71,10 @@ public class CompBedConnector : ThingComp
                 pasteComp = comp;
             }
         }
-
-        if (!ModLister.HasActiveModWithName("Dubs Bad Hygiene"))
-        {
-            return;
-        }
-
-        var t = GenTypes.GetTypeInAnyAssembly("zed_0xff.VNPE.Plugin_DBH");
-        if (t != null)
-        {
-            dbh = (IPlugin)Activator.CreateInstance(t, parent);
-        }
     }
 
     public override void PostDeSpawn(Map map)
     {
-        dbh = null;
         powerComp = null;
         pasteComp = null;
         hemogenComp = null;
@@ -318,13 +305,13 @@ public class CompBedConnector : ThingComp
             DrawBlood();
         }
 
-        if (dbh != null)
+        if (ModConfig.DBH_Loaded)
         {
             foreach (var t in CurOccupants.ToList())
             {
                 if (t != null)
                 {
-                    dbh.ProcessPawn(t);
+                    DBH.ProcessPawn(t, parent);
                 }
             }
         }
