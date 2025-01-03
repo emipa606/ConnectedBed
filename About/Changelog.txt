@@ -1,5 +1,8 @@
 # Changelog for ConnectedBed
 
+1.5.5 - Fixed debug-menu issue when DBH isnt loaded
+
+
 1.5.4 - Removed the convoluted DBH compatibility loading
 
 

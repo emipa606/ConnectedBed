@@ -6,7 +6,7 @@
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <DebugType>None</DebugType>
     <LangVersion>latest</LangVersion>
-    <FileVersion>1.5.4</FileVersion>
+    <FileVersion>1.5.5</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
@@ -26,8 +26,8 @@
       <Private>false</Private>
     </Reference>
     <Reference Include="BadHygiene">
-	    <HintPath>..\..\..\..\..\..\workshop\content\294100\836308268\1.5\Assemblies\BadHygiene.dll</HintPath>
-	    <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\836308268\1.5\Assemblies\BadHygiene.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
 </Project>

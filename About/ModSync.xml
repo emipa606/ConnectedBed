@@ -2,7 +2,7 @@
 <ModSyncNinjaData>
   <ID>601a722c-d730-4b40-8561-70e35b3aec97</ID>
   <ModName>Connected Bed (Continued)</ModName>
-  <Version>1.5.4</Version>
+  <Version>1.5.5</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
     <Owner>emipa606</Owner>
