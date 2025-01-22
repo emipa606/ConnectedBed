@@ -1,5 +1,8 @@
 # Changelog for ConnectedBed
 
+1.5.6 - Fixed hemogen farming check as its not an exclusive interraction
+
+
 1.5.5 - Fixed debug-menu issue when DBH isnt loaded
 
 

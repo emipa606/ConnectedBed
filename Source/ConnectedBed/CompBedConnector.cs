@@ -210,7 +210,7 @@ public class CompBedConnector : ThingComp
                 continue;
             }
 
-            if (pawn.guest.ExclusiveInteractionMode != PrisonerInteractionModeDefOf.HemogenFarm)
+            if (!pawn.guest.IsInteractionEnabled(PrisonerInteractionModeDefOf.HemogenFarm))
             {
                 continue;
             }
