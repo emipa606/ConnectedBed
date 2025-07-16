@@ -6,7 +6,7 @@ namespace zed_0xff.VNPE;
 
 public class ModConfig : Mod
 {
-    public static bool DBH_Loaded;
+    public static bool DbhLoaded;
 
     private static Vector2 scrollPosition = Vector2.zero;
     private static string currentVersion;
@@ -17,7 +17,7 @@ public class ModConfig : Mod
 
         if (ModLister.HasActiveModWithName("Dubs Bad Hygiene"))
         {
-            DBH_Loaded = true;
+            DbhLoaded = true;
             Log.Message("[ConnectedBed]: Adding support for Dubs Bad Hygiene");
         }
 
@@ -27,7 +27,7 @@ public class ModConfig : Mod
     public static ConnectedBedSettings Settings { get; private set; }
 
 
-    private void drawBlock(Listing_Standard l, string title, ref ConnectedBedSettings.GeneralSettings s)
+    private static void drawBlock(Listing_Standard l, string title, ref ConnectedBedSettings.GeneralSettings s)
     {
         l.Label(title);
         l.GapLine();
@@ -38,7 +38,7 @@ public class ModConfig : Mod
         l.Gap();
     }
 
-    private void drawBlock(Listing_Standard l, string title, ref ConnectedBedSettings.TypeSettings s)
+    private static void drawBlock(Listing_Standard l, string title, ref ConnectedBedSettings.TypeSettings s)
     {
         l.Label(title);
         l.GapLine();

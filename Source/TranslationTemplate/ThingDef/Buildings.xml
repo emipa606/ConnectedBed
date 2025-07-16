@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: universal bed connector -->
+  <VNPE_BedConnector.label>universal bed connector</VNPE_BedConnector.label>
+  <!-- EN: Connects any underlying bed or enterable building to VNPE, hemogen and hygiene networks. -->
+  <VNPE_BedConnector.description>Connects any underlying bed or enterable building to VNPE, hemogen and hygiene networks.</VNPE_BedConnector.description>
+  <!-- EN: connected bed -->
+  <VNPE_ConnectedBed.label>connected bed</VNPE_ConnectedBed.label>
+  <!-- EN: A hospital bed with integrated nutrient paste dripper, hemogen network connection and hygiene facilities. -->
+  <VNPE_ConnectedBed.description>A hospital bed with integrated nutrient paste dripper, hemogen network connection and hygiene facilities.</VNPE_ConnectedBed.description>
+  <!-- EN: universal loft bed connector -->
+  <VNPE_LoftBedConnector.label>universal loft bed connector</VNPE_LoftBedConnector.label>
+  <!-- EN: Absolutely the same as the non-loft one, just different height visually. Perfectly fits Loft beds from the mod of the same name. -->
+  <VNPE_LoftBedConnector.description>Absolutely the same as the non-loft one, just different height visually. Perfectly fits Loft beds from the mod of the same name.</VNPE_LoftBedConnector.description>
+</LanguageData>

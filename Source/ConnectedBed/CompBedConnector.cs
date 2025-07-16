@@ -61,26 +61,26 @@ public class CompBedConnector : ThingComp
 
         foreach (var comp in parent.GetComps<CompResource>())
         {
-            if (comp?.Props?.pipeNet?.defName == "VRE_HemogenNet")
+            switch (comp?.Props?.pipeNet?.defName)
             {
-                hemogenComp = comp;
-            }
-
-            if (comp?.Props?.pipeNet?.defName == "VNPE_NutrientPasteNet")
-            {
-                pasteComp = comp;
+                case "VRE_HemogenNet":
+                    hemogenComp = comp;
+                    break;
+                case "VNPE_NutrientPasteNet":
+                    pasteComp = comp;
+                    break;
             }
         }
     }
 
-    public override void PostDeSpawn(Map map)
+    public override void PostDeSpawn(Map map, DestroyMode mode = DestroyMode.Vanish)
     {
         powerComp = null;
         pasteComp = null;
         hemogenComp = null;
     }
 
-    private void FeedOccupant()
+    private void feedOccupant()
     {
         var net = pasteComp.PipeNet;
         if (net.Stored < 1)
@@ -122,7 +122,7 @@ public class CompBedConnector : ThingComp
         }
     }
 
-    private ref ConnectedBedSettings.TypeSettings GetSettingForPawn(Pawn pawn)
+    private static ref ConnectedBedSettings.TypeSettings getSettingForPawn(Pawn pawn)
     {
         if (pawn.IsPrisonerOfColony)
         {
@@ -142,7 +142,7 @@ public class CompBedConnector : ThingComp
         return ref ModConfig.Settings.others;
     }
 
-    private void TransfuseBlood()
+    private void transfuseBlood()
     {
         var net = hemogenComp.PipeNet;
         if (net.Stored < 1)
@@ -161,7 +161,7 @@ public class CompBedConnector : ThingComp
                 continue;
             }
 
-            var ts = GetSettingForPawn(pawn);
+            var ts = getSettingForPawn(pawn);
 
             if (bloodLossHediff.Severity < 1.0f - ts.transfuseIfLess)
             {
@@ -193,7 +193,7 @@ public class CompBedConnector : ThingComp
         }
     }
 
-    private void DrawBlood()
+    private void drawBlood()
     {
         if (!ModConfig.Settings.prisoners.draw)
         {
@@ -251,7 +251,7 @@ public class CompBedConnector : ThingComp
                 net.DistributeAmongStorage(1, out _);
                 if (IsViolationOnPawn(pawn, Faction.OfPlayer))
                 {
-                    ReportViolation(pawn, pawn.HomeFaction, -1, HistoryEventDefOf.ExtractedHemogenPack);
+                    reportViolation(pawn, pawn.HomeFaction, -1, HistoryEventDefOf.ExtractedHemogenPack);
                 }
             }
 
@@ -269,12 +269,12 @@ public class CompBedConnector : ThingComp
         }
     }
 
-    private bool IsViolationOnPawn(Pawn pawn, Faction billDoerFaction)
+    private static bool IsViolationOnPawn(Pawn pawn, Faction billDoerFaction)
     {
         return pawn.Faction != billDoerFaction || pawn.IsQuestLodger();
     }
 
-    private void ReportViolation(Pawn pawn, Faction factionToInform, int goodwillImpact,
+    private static void reportViolation(Pawn pawn, Faction factionToInform, int goodwillImpact,
         HistoryEventDef overrideEventDef = null)
     {
         if (factionToInform == null)
@@ -296,16 +296,16 @@ public class CompBedConnector : ThingComp
 
         if (pasteComp != null)
         {
-            FeedOccupant();
+            feedOccupant();
         }
 
         if (hemogenComp != null)
         {
-            TransfuseBlood();
-            DrawBlood();
+            transfuseBlood();
+            drawBlood();
         }
 
-        if (ModConfig.DBH_Loaded)
+        if (ModConfig.DbhLoaded)
         {
             foreach (var t in CurOccupants.ToList())
             {

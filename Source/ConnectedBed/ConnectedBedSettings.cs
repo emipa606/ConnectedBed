@@ -4,12 +4,12 @@ namespace zed_0xff.VNPE;
 
 public class ConnectedBedSettings : ModSettings
 {
-    public TypeSettings colonists = new TypeSettings(0.9f);
+    public TypeSettings colonists = new(0.9f);
 
-    public GeneralSettings general = new GeneralSettings();
-    public TypeSettings others = new TypeSettings();
-    public TypeSettings prisoners = new TypeSettings();
-    public TypeSettings slaves = new TypeSettings();
+    public GeneralSettings general = new();
+    public TypeSettings others = new();
+    public TypeSettings prisoners = new();
+    public TypeSettings slaves = new();
 
     public override void ExposeData()
     {
