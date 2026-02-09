@@ -1,12 +1,12 @@
-# [Connected Bed (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3259209078)
+# [[Abandoned] Connected Bed (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3259209078)
 
-![Image](https://i.imgur.com/buuPQel.png)
+![Image](https://img.litet.net/logos/Info.png)
 
 Update of zed_0xffs mod https://steamcommunity.com/sharedfiles/filedetails/?id=2957904090
 
-![Image](https://i.imgur.com/pufA0kM.png)
+![Image](https://img.litet.net/logos/Removed.png)
 	
-![Image](https://i.imgur.com/Z4GOv8H.png)
+![Image](https://img.litet.net/logos/OriginalDescription.png)
 
 # Connected Bed
 
@@ -47,13 +47,27 @@ You can use it with both [Vanilla Races Expanded - Sanguophage](https://steamcom
 
 Still no custom textures here (I've got trotter hands), just slightly greenish handles, like most VNPE things.
 
-![Image](https://i.imgur.com/PwoNOj4.png)
+![Image](https://img.litet.net/logos/ReportingIssues.png)
 
 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
+-  Always post your log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404)
+-  For best support, please use the Discord-channel for error-reporting.
+-  Do not report errors by making a discussion-thread, I get no notification of that.
+-  If you have the solution for a problem, please post it to the GitHub repository.
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
+
+
+
+![Image](https://img.litet.net/logos/Self-ReportingIssues.png)
+
+
+
+-  See if the error persists if you just have this mod and its requirements active.
+-  If not, try adding your other mods until it happens again.
+-  Always post your log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
@@ -61,4 +75,4 @@ Still no custom textures here (I've got trotter hands), just slightly greenish h
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/ConnectedBed?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3259209078) | tags:  hospital,  medical equipment
+[![Image](https://img.shields.io/github/v/release/emipa606/ConnectedBed?label=latest%20version&style=plastic&labelColor=0070cd&color=white)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3259209078)

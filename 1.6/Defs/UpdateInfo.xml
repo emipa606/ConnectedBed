@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TabulaRasa.UpdateDef Abstract="true" Name="ConnectedBed_UpdateInfoBase">
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3259209078</linkUrl>
+		<banner>UpdateInfo/ConnectedBed</banner>
+	</TabulaRasa.UpdateDef>
+	<TabulaRasa.UpdateDef ParentName="ConnectedBed_UpdateInfoBase" MayRequire="neronix17.toolbox">
+		<defName>ConnectedBed_1_6_0</defName>
+		<date>2026/2/9</date>
+		<content>The original version of this mod has been updated, please use it instead. This version will remain, but unlisted and will not be updated further.</content>
+	</TabulaRasa.UpdateDef>
+</Defs>
+
